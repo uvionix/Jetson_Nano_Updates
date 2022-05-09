@@ -2,15 +2,6 @@
 
 echo "*** Applying patch-001-09-May-2022 - Fixed mode switch bug when herelink airunit is connected ***"
 
-echo "Stopping network-watchdog service..."
-service network-watchdog stop
-
-echo "Stopping VPN service..."
-service openvpn-autostart stop
-
-echo "Stopping MAVProxy..."
-service mavproxy-autostart stop
-
 # Get the logged-in username
 usr=$(logname)
 
@@ -38,8 +29,5 @@ chmod +x /usr/local/bin/chmod_offline.py
 # Delete created repositories
 echo "Removing downloaded repositories..."
 rm -d -r Jetson_Nano_Python_Scripts
-
-echo "Starting network-watchdog service..."
-service network-watchdog start
 
 echo "Update successful!"
