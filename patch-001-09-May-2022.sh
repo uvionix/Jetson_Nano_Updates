@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "*** Applying patch-001-09-May-2022 - Fixed mode switch bug when herelink airunit is connected ***"
+echo "*** Applying patch-001-09-May-2022 - Canceled automatic mode change upon loosing network connectivity when HERELINK airunit is connected ***"
 
 # Get the logged-in username
 usr=$(logname)
