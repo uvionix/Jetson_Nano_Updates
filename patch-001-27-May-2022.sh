@@ -39,6 +39,9 @@ echo "Modify file permissions..."
 chmod +x /usr/local/bin/switch-to-rtl.sh
 chmod +x /usr/local/bin/network-watchdog.sh
 
+echo "Reload daemons..."
+systemctl daemon-reload
+
 # Delete created repositories
 echo "Removing downloaded repositories..."
 rm -d -r Jetson_Nano_Linux_Services
