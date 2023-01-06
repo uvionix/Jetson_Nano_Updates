@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "*** Applying patch-002-06-Jan-2023 -  ***"
+echo "*** Applying patch-002-06-Jan-2023 - Added support for video recording only when the vehicle is armed ***"
 
 # Get the logged-in username
 usr=$(logname)
