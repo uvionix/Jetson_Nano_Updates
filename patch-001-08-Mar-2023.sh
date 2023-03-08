@@ -2,6 +2,9 @@
 
 echo "*** Applying patch-001-08-Mar-2023 - Services setup files are specified as environment files ***"
 
+# Stop the modem watchdog service
+service modem-watchdog stop
+
 # Get the logged-in username
 usr=$(logname)
 
@@ -67,5 +70,8 @@ echo "Removing downloaded repositories..."
 rm -d -r Jetson_Nano_Linux_Services
 rm -d -r Jetson_Nano_Shell_Scripts
 rm -d -r Jetson_Nano_Python_Scripts
+
+echo "Start the modem watchdog service..."
+service modem-watchdog start
 
 echo "Update successful!"
